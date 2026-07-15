@@ -17,19 +17,22 @@ function Navbar() {
     <nav
       className={`w-full ${
         darkMode ? "bg-[#252128]" : "bg-[#4731D3]"
-      } transition-all duration-300`}
+      } transition-colors duration-300`}
     >
-      <div className="w-full px-6 py-6 flex items-center justify-between">
-        {/* Logo - Nokta kaldırıldı */}
+    
+      <div className="max-w-7xl mx-auto w-full px-6 sm:px-12 lg:px-20 py-6 flex items-center justify-between">
+        
+        {/* Logo */}
         <h1
-          className={`text-3xl font-bold ${
+          className={`text-3xl font-bold transition-colors duration-300 ${
             darkMode ? "text-[#CBF281]" : "text-white"
           }`}
         >
           {data.navbar.logo}
         </h1>
 
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-6 sm:gap-8">
+          
           {/* Dark Mode Butonu */}
           <div className="flex items-center gap-3">
             <button
@@ -54,8 +57,8 @@ function Navbar() {
               </span>
             </button>
 
-            {/* Tema Metni */}
-            <span className="text-sm font-medium text-white">
+            {/* Tema Metni - Mobilde çok sıkışmaması için sm:block eklendi */}
+            <span className="text-sm font-medium text-white hidden sm:block">
               {darkMode ? data.navbar.themeTextDark : data.navbar.themeTextLight}
             </span>
           </div>
@@ -63,10 +66,11 @@ function Navbar() {
           {/* Dil Seçimi */}
           <button
             onClick={toggleLanguage}
-            className="text-white font-semibold hover:text-[#CBF281] transition"
+            className="text-white font-semibold hover:text-[#CBF281] transition-colors duration-200"
           >
             {data.navbar.languageText}
           </button>
+          
         </div>
       </div>
     </nav>
