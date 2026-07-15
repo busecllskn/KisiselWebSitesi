@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <div className="justify-center">
+    <div className="flex flex-col items-center justify-center max-w-6xl mx-auto px-4">
         <Header/>
         <Hero/>
         <Skills/>
