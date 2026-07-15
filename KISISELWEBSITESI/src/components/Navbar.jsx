@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";       // 👈 Zaten sende olan dosya
-import { LanguageContext } from "../context/LanguageContext"; // 👈 Zaten sende olan dosya
+import { ThemeContext } from "../context/ThemeContext";
+import { LanguageContext } from "../context/LanguageContext";
 import portfolio from "../data/data.json";
 
 function Navbar() {
@@ -20,7 +20,6 @@ function Navbar() {
       } transition-all duration-300`}
     >
       <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-        {/* Logo */}
         <h1
           className={`text-3xl font-bold ${
             darkMode ? "text-[#CBF281]" : "text-white"
@@ -30,29 +29,39 @@ function Navbar() {
           <span className="text-[#CBF281]">.</span>
         </h1>
 
-        {/* Sağ Menü */}
         <div className="flex items-center gap-8">
-          {/* Dark Mode */}
+          {/* Dark Mode Butonu */}
           <div className="flex items-center gap-3">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className={`relative w-14 h-7 rounded-full transition ${
-                darkMode ? "bg-[#CBF281]" : "bg-gray-300"
+              className={`relative w-14 h-7 rounded-full flex items-center justify-between px-2 cursor-pointer border border-[#CBF281]/20 transition-all duration-300 ${
+                darkMode ? "bg-[#3A3A3A]" : "bg-[#4731D3]"
               }`}
             >
+              <i className="fa-regular fa-moon text-xs" style={{ color: "rgb(255, 212, 59)" }} />
+              <i className="fa-regular fa-sun text-xs" style={{ color: "rgb(255, 212, 59)" }} />
+
               <span
-                className={`absolute top-1 w-5 h-5 rounded-full bg-white transition-all duration-300 ${
-                  darkMode ? "left-8" : "left-1"
+                className={`absolute top-1 w-5 h-5 rounded-full shadow-md flex items-center justify-center transition-all duration-300 ${
+                  darkMode ? "left-1 bg-[#FFE600]" : "left-8 bg-[#EAEAEA]"
                 }`}
-              ></span>
+              >
+
+                <span
+                  className={`w-2.5 h-2.5 rounded-full ${
+                    darkMode ? "bg-[#252128]" : "bg-white"
+                  }`}
+                />
+              </span>
             </button>
 
+            {/* Tema Metni */}
             <span className="text-sm font-medium text-white">
               {darkMode ? data.navbar.themeTextDark : data.navbar.themeTextLight}
             </span>
           </div>
 
-          {/* Language */}
+          {/* Dil Seçimi */}
           <button
             onClick={toggleLanguage}
             className="text-white font-semibold hover:text-[#CBF281] transition"
