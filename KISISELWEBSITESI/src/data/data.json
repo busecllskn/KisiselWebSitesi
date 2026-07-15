@@ -2,7 +2,8 @@
     "tr": {
       "navbar": {
         "logo": "Buse",
-        "themeText": "GECE MODU",
+        "themeTextDark": "GECE MODU",
+        "themeTextLight": "GÜNDÜZ MODU",
         "languageText": "ENGLISH'E GEÇ"
       },
       "hero": {
@@ -87,7 +88,8 @@
     "en": {
       "navbar": {
         "logo": "Buse",
-        "themeText": "DARK MODE",
+        "themeTextDark": "DARK MODE",
+        "themeTextLight": "LIGHT MODE",
         "languageText": "SWITCH TO TURKISH"
       },
       "hero": {

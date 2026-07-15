@@ -52,7 +52,8 @@ function Navbar() {
                 darkMode ? "text-white" : "text-white"
               }`}
             >
-              {data.navbar.themeText}
+              {/* ☀️ burası güncellendi: darkMode true ise Dark, false ise Light metni gelir */}
+              {darkMode ? data.navbar.themeTextDark : data.navbar.themeTextLight}
             </span>
           </div>
 
