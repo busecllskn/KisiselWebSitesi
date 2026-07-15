@@ -1,14 +1,14 @@
 import React from "react";
 
-function Header() {
+function Navbar() {
   return (
     <>
     <div className="w-2/12">
-       Header 
+       Navbar 
     </div>
     <p>Personal Portfolio</p>
     </>
   )
 }
 
-export default Header; 
+export default Navbar; 

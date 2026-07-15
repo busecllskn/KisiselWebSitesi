@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Header from "../components/Navbar";
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import Profile from "../components/Profile";
@@ -9,7 +9,7 @@ function Home() {
   return (
     <div className="flex flex-col items-center justify-center max-w-6xl mx-auto px-4">
         <Header/>
-        <Hero/>
+        <Navbar/> 
         <Skills/>
         <Profile/>
         <Projects/>
