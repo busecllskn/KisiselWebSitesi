@@ -33,11 +33,11 @@
         "basicInfo": {
           "birthDate": "01.02.1999",
           "city": "Ankara",
-          "education": "Bilgisayar Programcılığı",
+          "education": "Beslenme ve Diyetetik - Atılım Üniversitesi",
           "role": "Frontend Developer",
           "email": "buseclskn738@example.com"
         },
-        "about": "Frontend geliştirme alanında kendimi sürekli geliştiriyorum. Temiz kod yazmaya, kullanıcı deneyimine ve responsive tasarımlara önem veriyorum."
+        "about": "Kullanıcı deneyimi odaklı, temiz kod standartlarına bağlı ve responsive tasarım prensiplerini benimseyen bir Frontend Geliştiriciyim. Teknolojik gelişmeleri takip ederek projelerime modern ve sürdürülebilir çözümler katıyorum."
       },
       "projects": {
         "title": "Projeler",
@@ -119,11 +119,11 @@
         "basicInfo": {
           "birthDate": "01.02.1999",
           "city": "Ankara",
-          "education": "Computer Programming",
+          "education": "Nutrition and Dietetics - Atılım University",
           "role": "Frontend Developer",
           "email": "buseclskn738@example.com"
         },
-        "about": "I continuously improve myself in frontend development. I enjoy writing clean code, creating responsive layouts and building user-friendly interfaces."
+        "about": "I am a Frontend Developer focused on user experience, committed to clean code standards, and dedicated to responsive design principles. I stay up-to-date with technological advancements to incorporate modern and sustainable solutions into my projects."
       },
       "projects": {
         "title": "Projects",
