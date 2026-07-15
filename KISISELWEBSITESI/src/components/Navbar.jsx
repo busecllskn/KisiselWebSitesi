@@ -1,10 +1,11 @@
-import { useTheme } from "../hooks/useTheme";        
-import { useLanguage } from "../hooks/useLanguage";  
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";       // 👈 Zaten sende olan dosya
+import { LanguageContext } from "../context/LanguageContext"; // 👈 Zaten sende olan dosya
 import portfolio from "../data/data.json";
 
 function Navbar() {
-  const { darkMode, setDarkMode } = useTheme(); 
-  const { language, setLanguage } = useLanguage();
+  const { darkMode, setDarkMode } = useContext(ThemeContext);
+  const { language, setLanguage } = useContext(LanguageContext);
 
   const data = portfolio[language];
 
@@ -31,7 +32,7 @@ function Navbar() {
 
         {/* Sağ Menü */}
         <div className="flex items-center gap-8">
-          {/* Dark Mode Butonu */}
+          {/* Dark Mode */}
           <div className="flex items-center gap-3">
             <button
               onClick={() => setDarkMode(!darkMode)}
@@ -47,12 +48,11 @@ function Navbar() {
             </button>
 
             <span className="text-sm font-medium text-white">
-              {/* Aktif temaya ve seçili dile göre dinamik buton metni */}
               {darkMode ? data.navbar.themeTextDark : data.navbar.themeTextLight}
             </span>
           </div>
 
-          {/* Dil Değiştirme Butonu */}
+          {/* Language */}
           <button
             onClick={toggleLanguage}
             className="text-white font-semibold hover:text-[#CBF281] transition"
