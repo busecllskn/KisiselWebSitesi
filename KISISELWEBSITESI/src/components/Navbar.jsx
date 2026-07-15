@@ -19,14 +19,14 @@ function Navbar() {
         darkMode ? "bg-[#252128]" : "bg-[#4731D3]"
       } transition-all duration-300`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+      <div className="w-full px-6 py-6 flex items-center justify-between">
+        {/* Logo - Nokta kaldırıldı */}
         <h1
           className={`text-3xl font-bold ${
             darkMode ? "text-[#CBF281]" : "text-white"
           }`}
         >
           {data.navbar.logo}
-          <span className="text-[#CBF281]">.</span>
         </h1>
 
         <div className="flex items-center gap-8">
@@ -46,7 +46,6 @@ function Navbar() {
                   darkMode ? "left-1 bg-[#FFE600]" : "left-8 bg-[#EAEAEA]"
                 }`}
               >
-
                 <span
                   className={`w-2.5 h-2.5 rounded-full ${
                     darkMode ? "bg-[#252128]" : "bg-white"
