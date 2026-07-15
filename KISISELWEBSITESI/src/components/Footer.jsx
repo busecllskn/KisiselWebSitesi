@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { LanguageContext } from "../context/LanguageContext";
-import { FaTwitter, FaCodepen, FaAt, FaInstagram } from "react-icons/fa";
+import { FaTwitter, FaGithub, FaAt, FaInstagram } from "react-icons/fa"; // FaCodepen yerine FaGithub import edildi
 import portfolio from "../data/data.json";
 
 function Contact() {
@@ -17,7 +17,7 @@ function Contact() {
     >
       <div className="max-w-4xl mx-auto px-6 flex flex-col items-center text-center space-y-6">
         
-        {/* Başlık*/}
+        {/* Başlık */}
         <h2 
           className={`text-4xl md:text-5xl font-bold tracking-tight transition-colors duration-300 ${
             darkMode ? "text-[#CBF281]" : "text-[#4731D3]"
@@ -35,7 +35,7 @@ function Contact() {
           {data.contact?.description}
         </p>
 
-        {/* E-posta Adresi*/}
+        {/* E-posta*/}
         <a 
           href={`mailto:${data.contact?.email}`}
           className={`text-lg sm:text-xl font-medium underline underline-offset-4 decoration-2 transition-colors duration-300 ${
@@ -45,7 +45,6 @@ function Contact() {
           {data.contact?.email}
         </a>
 
-        {/* Sosyal Medya */}
         <div className="flex items-center gap-6 pt-4">
           {/* Twitter */}
           <a 
@@ -68,7 +67,7 @@ function Contact() {
               darkMode ? "text-[#CBF281] hover:text-white" : "text-[#4731D3] hover:text-[#3724a6]"
             }`}
           >
-            <FaCodepen />
+            <FaGithub />
           </a>
 
           {/* E-posta */}
