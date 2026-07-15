@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { LanguageContext } from "../context/LanguageContext";
 import portfolio from "../data/data.json";
+import myPicture from "../assets/picturesofme.jpg"; 
 
 function Hero() {
   const { darkMode } = useContext(ThemeContext);
@@ -31,7 +32,7 @@ function Hero() {
       {/* İçerik Alanı */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         
-        {/* Sol Taraf*/}
+        {/* Sol Taraf */}
         <div className="md:col-span-7 space-y-6">
           <h2 
             className="text-2xl font-bold transition-colors duration-300 text-[#CBF281]"
@@ -63,7 +64,7 @@ function Hero() {
 
             {/* Linkedin Butonu */}
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/feed/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#4731D3] font-bold rounded-md shadow-md hover:bg-[#CBF281] hover:text-[#4731D3] transition-all transform hover:-translate-y-0.5"
@@ -74,17 +75,13 @@ function Hero() {
           </div>
         </div>
 
-        {/* Sağ Taraf  */}
+        {/* Sağ Taraf*/}
         <div className="md:col-span-5 flex justify-center md:justify-end">
-         
           <div className="relative w-full max-w-sm aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
             <img 
-              src="/hero-image.png" 
+              src={myPicture} 
               alt="Frontend Developer" 
               className="w-full h-full object-cover object-center"
-              onError={(e) => {
-                e.target.src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800";
-              }}
             />
           </div>
         </div>
