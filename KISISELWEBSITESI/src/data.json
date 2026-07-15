@@ -1,0 +1,171 @@
+{
+    "tr": {
+      "navbar": {
+        "logo": "Buse",
+        "themeText": "GECE MODU",
+        "languageText": "ENGLISH'E GEÇ"
+      },
+      "hero": {
+        "greeting": "Merhaba, ben",
+        "name": "Buse Çalışkan",
+        "title": "Frontend Developer",
+        "description": "Modern, erişilebilir ve kullanıcı odaklı web uygulamaları geliştiriyorum. React, JavaScript ve Tailwind CSS ile projeler üretiyorum.",
+        "github": "Github",
+        "linkedin": "LinkedIn",
+        "image": "/images/profile.png"
+      },
+      "skills": {
+        "title": "Yetenekler",
+        "items": [
+          "JavaScript",
+          "React",
+          "Redux",
+          "Node.js",
+          "Tailwind CSS",
+          "Figma"
+        ]
+      },
+      "profile": {
+        "title": "Profil",
+        "basicInfoTitle": "Temel Bilgiler",
+        "aboutTitle": "Hakkımda",
+        "basicInfo": {
+          "birthDate": "01.02.1999",
+          "city": "Ankara",
+          "education": "Bilgisayar Programcılığı",
+          "role": "Frontend Developer",
+          "email": "buseclskn738@example.com"
+        },
+        "about": "Frontend geliştirme alanında kendimi sürekli geliştiriyorum. Temiz kod yazmaya, kullanıcı deneyimine ve responsive tasarımlara önem veriyorum."
+      },
+      "projects": {
+        "title": "Projeler",
+        "items": [
+          {
+            "id": 1,
+            "title": "Pizza Sipariş Uygulaması",
+            "description": "React kullanılarak geliştirilen pizza sipariş uygulaması.",
+            "technologies": [
+              "React",
+              "Axios",
+              "React Router",
+              "Tailwind CSS"
+            ],
+            "github": "https://github.com/busecllskn/Pizza-Project",
+            "demo": "https://pizza-demo.netlify.app",
+            "image": "/images/pizza.png"
+          },
+          {
+            "id": 2,
+            "title": "Movie App",
+            "description": "Film ekleme, düzenleme ve silme işlemlerini gerçekleştiren CRUD uygulaması.",
+            "technologies": [
+              "React",
+              "Redux",
+              "Axios"
+            ],
+            "github": "https://github.com/username/movie-app",
+            "demo": "https://movie-demo.netlify.app",
+            "image": "/images/movie.png"
+          }
+        ],
+        "githubButton": "Github",
+        "demoButton": "Canlı Demo"
+      },
+      "contact": {
+        "title": "Bir Sonraki Projenizde Birlikte Çalışalım.",
+        "description": "Benimle iletişime geçebilirsiniz.",
+        "email": "buseclskn738@example.com",
+        "github": "https://github.com/busecllskn",
+        "linkedin": "https://linkedin.com/in/busecllskn"
+      },
+      "footer": {
+        "copyright": "© 2026 Buse Çalışkan. Tüm hakları saklıdır."
+      }
+    },
+  
+    "en": {
+      "navbar": {
+        "logo": "Buse",
+        "themeText": "DARK MODE",
+        "languageText": "SWITCH TO TURKISH"
+      },
+      "hero": {
+        "greeting": "Hi, I'm",
+        "name": "Buse Çalışkan",
+        "title": "Frontend Developer",
+        "description": "I build modern, accessible and user-friendly web applications using React, JavaScript and Tailwind CSS.",
+        "github": "Github",
+        "linkedin": "LinkedIn",
+        "image": "/images/profile.png"
+      },
+      "skills": {
+        "title": "Skills",
+        "items": [
+          "JavaScript",
+          "React",
+          "Redux",
+          "Node.js",
+          "Tailwind CSS",
+          "Figma"
+        ]
+      },
+      "profile": {
+        "title": "Profile",
+        "basicInfoTitle": "Basic Information",
+        "aboutTitle": "About Me",
+        "basicInfo": {
+          "birthDate": "01.02.1999",
+          "city": "Ankara",
+          "education": "Computer Programming",
+          "role": "Frontend Developer",
+          "email": "buseclskn738@example.com"
+        },
+        "about": "I continuously improve myself in frontend development. I enjoy writing clean code, creating responsive layouts and building user-friendly interfaces."
+      },
+      "projects": {
+        "title": "Projects",
+        "items": [
+          {
+            "id": 1,
+            "title": "Pizza Ordering App",
+            "description": "A pizza ordering application built with React.",
+            "technologies": [
+              "React",
+              "Axios",
+              "React Router",
+              "Tailwind CSS"
+            ],
+            "github": "https://github.com/busecllskn/Pizza-Project",
+            "demo": "https://pizza-demo.netlify.app",
+            "image": "/images/pizza.png"
+          },
+          {
+            "id": 2,
+            "title": "Movie App",
+            "description": "CRUD application for adding, editing and deleting movies.",
+            "technologies": [
+              "React",
+              "Redux",
+              "Axios"
+            ],
+            "github": "https://github.com/username/movie-app",
+            "demo": "https://movie-demo.netlify.app",
+            "image": "/images/movie.png"
+          }
+        ],
+        "githubButton": "Github",
+        "demoButton": "Live Demo"
+      },
+      "contact": {
+        "title": "Let's Work Together on Your Next Project.",
+        "description": "Feel free to contact me.",
+        "email": "buseclskn738@example.com",
+        "github": "https://github.com/busecllskn",
+        "linkedin": "https://linkedin.com/in/busecllskn"
+      },
+      "footer": {
+        "copyright": "© 2026 Buse Çalışkan. All rights reserved."
+      }
+    }
+  }
