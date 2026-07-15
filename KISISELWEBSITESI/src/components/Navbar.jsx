@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
-import { LanguageContext } from "../context/LanguageContext";
+import { useTheme } from "../hooks/useTheme";        
+import { useLanguage } from "../hooks/useLanguage";  
 import portfolio from "../data/data.json";
 
 function Navbar() {
-  const { darkMode, setDarkMode } = useContext(ThemeContext);
-  const { language, setLanguage } = useContext(LanguageContext);
+  const { darkMode, setDarkMode } = useTheme(); 
+  const { language, setLanguage } = useLanguage();
 
   const data = portfolio[language];
 
@@ -32,7 +31,7 @@ function Navbar() {
 
         {/* Sağ Menü */}
         <div className="flex items-center gap-8">
-          {/* Dark Mode */}
+          {/* Dark Mode Butonu */}
           <div className="flex items-center gap-3">
             <button
               onClick={() => setDarkMode(!darkMode)}
@@ -47,17 +46,13 @@ function Navbar() {
               ></span>
             </button>
 
-            <span
-              className={`text-sm font-medium ${
-                darkMode ? "text-white" : "text-white"
-              }`}
-            >
-              {/* ☀️ burası güncellendi: darkMode true ise Dark, false ise Light metni gelir */}
+            <span className="text-sm font-medium text-white">
+              {/* Aktif temaya ve seçili dile göre dinamik buton metni */}
               {darkMode ? data.navbar.themeTextDark : data.navbar.themeTextLight}
             </span>
           </div>
 
-          {/* Language */}
+          {/* Dil Değiştirme Butonu */}
           <button
             onClick={toggleLanguage}
             className="text-white font-semibold hover:text-[#CBF281] transition"
