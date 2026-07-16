@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { LanguageContext } from "../context/LanguageContext";
 import portfolio from "../data/data.json";
+import pictureOfCoding from "../assets/pictureofcoding.jpg"; // Görseli en üstte import ettik
 
 function Profile() {
   const { darkMode } = useContext(ThemeContext);
@@ -37,7 +38,7 @@ function Profile() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           
-          {/* 1. Sütun: Temel Bilgilerim */}
+          {/*Temel Bilgilerim */}
           <div className="md:col-span-4 space-y-6 text-white">
             <h3 className="text-2xl font-bold tracking-wide text-[#CBF281] md:text-white">
               {data.profile?.basicInfoTitle}
@@ -86,21 +87,18 @@ function Profile() {
             </div>
           </div>
 
-          {/* 2. Sütun */}
+          {/* Kodlama Görseli */}
           <div className="md:col-span-4 flex justify-center">
-            <div className="w-full max-w-[320px] aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
+            <div className="w-full max-w-xs aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
               <img
-                src={data.hero?.image || "/images/profile.png"} // JSON içindeki görsel yolunu kullandım
+                src={pictureOfCoding} 
                 alt="Buse Çalışkan"
                 className="w-full h-full object-cover object-center"
-                onError={(e) => {
-                  e.target.src = "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600";
-                }}
               />
             </div>
           </div>
 
-          {/* 3. Sütun: Hakkımda */}
+          {/*Hakkımda */}
           <div className="md:col-span-4 space-y-6 text-white">
             <h3 className="text-2xl font-bold tracking-wide text-[#CBF281] md:text-white">
               {data.profile?.aboutTitle}
