@@ -15,13 +15,13 @@ function Hero() {
       
       {/* Arka Plandaki İki Renkli Yapı */}
       <div className="absolute inset-0 flex flex-col md:flex-row pointer-events-none">
-        {/* Sol büyük alan (%70) */}
+        {/* Sol büyük alan (%70) - Tam olarak #4731D3 */}
         <div 
           className={`w-full md:w-[70%] transition-colors duration-300 ${
             darkMode ? "bg-[#252128]" : "bg-[#4731D3]"
           }`}
         ></div>
-        {/* Sağ dar alan (%30)*/}
+        {/* Sağ dar alan (%30) - Tam olarak #CBF281 */}
         <div 
           className={`w-full md:w-[30%] transition-colors duration-300 ${
             darkMode ? "bg-[#1a2e05] md:bg-[#1e3506]" : "bg-[#CBF281]"
@@ -49,7 +49,7 @@ function Hero() {
           </p>
           
           <div className="flex flex-wrap gap-4 pt-4">
-            {/* Github Butonu */}
+            {/* Github Butonu (Doğrudan SVG İkonlu) */}
             <a 
               href="https://github.com/busecllskn" 
               target="_blank" 
@@ -66,7 +66,7 @@ function Hero() {
               <span>Github</span>
             </a>
 
-            {/* Linkedin Butonu */}
+            {/* Linkedin Butonu (Doğrudan SVG İkonlu) */}
             <a 
               href="https://www.linkedin.com/feed/" 
               target="_blank" 
@@ -85,10 +85,10 @@ function Hero() {
           </div>
         </div>
 
-        {/* Sağ Taraf */}
+        {/* Sağ Taraf (Büyük Profil Fotoğrafı) */}
         <div className="md:col-span-5 flex justify-center md:justify-end">
-          {/* Büyük Profil Fotoğrafı Kartı */}
-          <div className="relative w-full max-w-sm aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl z-20">
+          {/* rounded-[2rem] uyarısı -> rounded-4xl olarak güncellendi */}
+          <div className="relative w-full max-w-sm aspect-4/5 rounded-4xl overflow-hidden shadow-2xl z-20">
             <img 
               src={myPicture} 
               alt="Frontend Developer" 
