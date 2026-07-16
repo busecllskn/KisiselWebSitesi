@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { LanguageContext } from "../context/LanguageContext";
 import portfolio from "../data/data.json";
+import { toast } from "react-toastify";
 
 function Navbar() {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
@@ -9,8 +10,21 @@ function Navbar() {
 
   const data = portfolio[language];
 
+
   const toggleLanguage = () => {
-    setLanguage(language === "tr" ? "en" : "tr");
+    const nextLang = language === "tr" ? "en" : "tr";
+    setLanguage(nextLang);
+    toast.success(
+      nextLang === "tr" ? "Dil Türkçe olarak değiştirildi!" : "Language switched to English!"
+    );
+  };
+
+  const handleThemeChange = () => {
+    const nextTheme = !darkMode;
+    setDarkMode(nextTheme);
+    toast.info(
+      nextTheme ? "Karanlık mod aktif!" : "Aydınlık mod aktif!"
+    );
   };
 
   return (
@@ -21,8 +35,7 @@ function Navbar() {
     >
     
       <div className="max-w-7xl mx-auto w-full px-6 sm:px-12 lg:px-20 py-6 flex items-center justify-between">
-        
-        {/* Logo */}
+
         <h1
           className={`text-3xl font-bold transition-colors duration-300 ${
             darkMode ? "text-[#CBF281]" : "text-white"
@@ -36,7 +49,7 @@ function Navbar() {
           {/* Dark Mode Butonu */}
           <div className="flex items-center gap-3">
             <button
-              onClick={() => setDarkMode(!darkMode)}
+              onClick={handleThemeChange}
               className={`relative w-14 h-7 rounded-full flex items-center justify-between px-2 cursor-pointer border border-[#CBF281]/20 transition-all duration-300 ${
                 darkMode ? "bg-[#3A3A3A]" : "bg-[#4731D3]"
               }`}
@@ -57,7 +70,6 @@ function Navbar() {
               </span>
             </button>
 
-            {/* Tema Metni - Mobilde çok sıkışmaması için sm:block eklendi */}
             <span className="text-sm font-medium text-white hidden sm:block">
               {darkMode ? data.navbar.themeTextDark : data.navbar.themeTextLight}
             </span>
@@ -65,7 +77,7 @@ function Navbar() {
 
           {/* Dil Seçimi */}
           <button
-            onClick={toggleLanguage}
+            onClick={toggleLanguage} 
             className="text-white font-semibold hover:text-[#CBF281] transition-colors duration-200"
           >
             {data.navbar.languageText}
