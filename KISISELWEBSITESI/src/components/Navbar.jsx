@@ -10,7 +10,6 @@ function Navbar() {
 
   const data = portfolio[language];
 
-
   const toggleLanguage = () => {
     const nextLang = language === "tr" ? "en" : "tr";
     setLanguage(nextLang);
@@ -33,7 +32,6 @@ function Navbar() {
         darkMode ? "bg-[#252128]" : "bg-[#4731D3]"
       } transition-colors duration-300`}
     >
-    
       <div className="max-w-7xl mx-auto w-full px-6 sm:px-12 lg:px-20 py-6 flex items-center justify-between">
 
         <h1
@@ -46,31 +44,34 @@ function Navbar() {
 
         <div className="flex items-center gap-6 sm:gap-8">
           
-          {/* Dark Mode Butonu */}
+          {/* Gece / Gündüz Butonu */}
           <div className="flex items-center gap-3">
             <button
               onClick={handleThemeChange}
-              className={`relative w-14 h-7 rounded-full flex items-center justify-between px-2 cursor-pointer border border-[#CBF281]/20 transition-all duration-300 ${
-                darkMode ? "bg-[#3A3A3A]" : "bg-[#4731D3]"
+              className={`relative w-14 h-7 rounded-full cursor-pointer border transition-all duration-300 ${
+                darkMode 
+                  ? "bg-[#3A3A3A] border-[#CBF281]/20" 
+                  : "bg-[#705ee4] border-white/20"
               }`}
             >
-              <i className="fa-regular fa-moon text-xs" style={{ color: "rgb(255, 212, 59)" }} />
-              <i className="fa-regular fa-sun text-xs" style={{ color: "rgb(255, 212, 59)" }} />
-
+              {/* Kayan Daire*/}
               <span
-                className={`absolute top-1 w-5 h-5 rounded-full shadow-md flex items-center justify-center transition-all duration-300 ${
-                  darkMode ? "left-1 bg-[#FFE600]" : "left-8 bg-[#EAEAEA]"
+                className={`absolute top-0.5 w-5 h-5 rounded-full shadow-md flex items-center justify-center transition-all duration-300 ${
+                  darkMode 
+                    ? "left-8 bg-[#FFE600]" 
+                    : "left-1 bg-white"
                 }`}
               >
-                <span
-                  className={`w-2.5 h-2.5 rounded-full ${
-                    darkMode ? "bg-[#252128]" : "bg-white"
-                  }`}
-                />
+                {darkMode ? (
+                  <i className="fa-solid fa-moon text-xs text-[#252128]" />
+                ) : (
+                  <i className="fa-solid fa-sun text-xs text-[#FFE600]" />
+                )}
               </span>
             </button>
 
-            <span className="text-sm font-medium text-white hidden sm:block">
+            {/* Tema Metni*/}
+            <span className="text-sm font-medium text-white hidden sm:block min-w-22.5">
               {darkMode ? data.navbar.themeTextDark : data.navbar.themeTextLight}
             </span>
           </div>
