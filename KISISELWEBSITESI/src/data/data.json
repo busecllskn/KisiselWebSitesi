@@ -46,32 +46,33 @@
             "id": 1,
             "title": "Pizza Sipariş Uygulaması",
             "description": "React kullanılarak geliştirilen pizza sipariş uygulaması.",
-            "technologies": [
-              "React",
-              "Axios",
-              "React Router",
-              "Tailwind CSS"
-            ],
+            "technologies": ["React", "Axios", "React Router", "Tailwind CSS"],
             "github": "https://github.com/busecllskn/Pizza-Project",
-            "demo": "https://pizza-demo.netlify.app",
             "image": "/images/pizza.png"
           },
           {
             "id": 2,
-            "title": "Movie App",
+            "title": "Film Uygulaması",
             "description": "Film ekleme, düzenleme ve silme işlemlerini gerçekleştiren CRUD uygulaması.",
-            "technologies": [
-              "React",
-              "Redux",
-              "Axios"
-            ],
-            "github": "https://github.com/username/movie-app",
-            "demo": "https://movie-demo.netlify.app",
+            "technologies": ["React", "Redux", "Axios"],
+            "image": "/images/movie.png"
+          },
+          {
+            "id": 3,
+            "title": "Başarılı Giriş Toastify Uygulaması",
+            "description": "Kullanıcı giriş işlemi başarılı olduğunda toastify ile bildirim gösteren uygulama.",
+            "technologies": ["React", "Toastify"],
+            "image": "/images/movie.png"
+          },
+          {
+            "id": 4,
+            "title": "Task Yönetim Uygulaması",
+            "description": "Görevleri yönetmek için kullanılan uygulama.",
+            "technologies": ["React", "Redux", "Axios"],
             "image": "/images/movie.png"
           }
         ],
-        "githubButton": "Github",
-        "demoButton": "Canlı Demo"
+        "githubButton": "Github"
       },
       "contact": {
         "title": "Bir Sonraki Projenizde Birlikte Çalışalım.",
@@ -132,32 +133,34 @@
             "id": 1,
             "title": "Pizza Ordering App",
             "description": "A pizza ordering application built with React.",
-            "technologies": [
-              "React",
-              "Axios",
-              "React Router",
-              "Tailwind CSS"
-            ],
+            "technologies": ["React", "Axios", "React Router", "Tailwind CSS"],
             "github": "https://github.com/busecllskn/Pizza-Project",
-            "demo": "https://pizza-demo.netlify.app",
             "image": "/images/pizza.png"
           },
           {
             "id": 2,
             "title": "Movie App",
             "description": "CRUD application for adding, editing and deleting movies.",
-            "technologies": [
-              "React",
-              "Redux",
-              "Axios"
-            ],
+            "technologies": ["React", "Redux", "Axios"],
             "github": "https://github.com/username/movie-app",
-            "demo": "https://movie-demo.netlify.app",
+            "image": "/images/movie.png"
+          },
+          {
+            "id": 3,
+            "title": "Successful Login Toastify App",
+            "description": "Application that shows a notification with Toastify when the login process is successful.",
+            "technologies": ["React", "Toastify"],
+            "image": "/images/movie.png"
+          },
+          {
+            "id": 4,
+            "title": "Task Management App",
+            "description": "Application used to manage tasks.",
+            "technologies": ["React", "Redux", "Axios"],
             "image": "/images/movie.png"
           }
         ],
-        "githubButton": "Github",
-        "demoButton": "Live Demo"
+        "githubButton": "Github"
       },
       "contact": {
         "title": "Let's Work Together on Your Next Project.",
