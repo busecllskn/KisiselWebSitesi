@@ -1,51 +1,60 @@
-describe('Kişisel Web Sitesi E2E Test Süreci', () => {
-
+describe("Kişisel Web Sitesi E2E Test", () => {
   beforeEach(() => {
-    cy.visit('http://localhost:5173');
+    cy.visit("/");
   });
 
-  // TEST: Tema Değiştirme Kontrolü
-  it('Tema değiştirme butonu arka plan rengini güncellemeli', () => {
-    // Navbar'daki ilk butona (Tema Değiştirici) tıkla
-    cy.get('nav button').first().click();
-
-    // Dark mode arka plan renginin sınıflara yansıp yansımadığını doğrular
-    cy.get('section').first().should('have.class', 'bg-[#252128]');
+  // Tema Değiştirme
+  it("Tema değiştirme butonu çalışmalı", () => {
+    cy.get("nav button").first().click();
+    cy.get("html").should("have.class", "dark");
   });
 
-  // TEST: Dil Değiştirme Kontrolü
-  it('Dil değiştirildiğinde içerik Türkçe/İngilizce olarak güncellenmeli', () => {
-    // Dil değiştirme butonunu bul ve tıkla (Örn: İçinde "Türkçe", "TR" veya "EN" geçen buton)
-    cy.get('button').contains(/Türkçe|TR|EN/i).click();
-
-    // Başlığın değiştiğini doğrulama
-    cy.get('h2').should('exist');
+  // Dil Değiştirme
+  it("Dil değiştirildiğinde içerik güncellenmeli", () => {
+    cy.contains("button", /Türkçe|TR|EN/i).click();
+    cy.get("h1, h2").should("be.visible");
   });
 
-  // TEST: Yetenekler Bölümündeki İkonlar
-  it('Skills bölümündeki tüm ikonlar görünür olmalı ve kırık link olmamalı', () => {
-  
-    cy.get('img').each(($el) => {
-      cy.wrap($el)
-        .should('be.visible')
-        .and(($img) => {
-          expect($img[0].naturalWidth).to.be.greaterThan(0);
-        });
+  // Skills ikonları
+  it("Skills bölümündeki ikonlar görünür olmalı", () => {
+    cy.contains("section", /Skills|Yetenekler/i)
+      .find("img")
+      .each(($img) => {
+        cy.wrap($img)
+          .should("be.visible")
+          .and(($el) => {
+            expect($el[0].naturalWidth).to.be.greaterThan(0);
+          });
+      });
+  });
+
+  // Sosyal medya linkleri
+  it("İletişim linkleri doğru olmalı", () => {
+    cy.get('a[href*="x.com/Busecllskn"]')
+      .should("exist")
+      .and("have.attr", "target", "_blank");
+
+    cy.get('a[href*="instagram.com/busecllskn"]')
+      .should("exist")
+      .and("have.attr", "target", "_blank");
+
+    cy.get('a[href^="mailto:"]')
+      .should("exist")
+      .and("have.attr", "href")
+      .and("include", "mailto:");
+  });
+
+  // Linkler ve butonlar aktif olmalı
+  it("Sayfadaki butonlar ve linkler aktif olmalı", () => {
+    cy.get("button").each(($btn) => {
+      cy.wrap($btn).should("be.visible").and("not.be.disabled");
+    });
+
+    // Sadece gerçek yönlendirme hedefi olan dış bağlantıları kontrol eder
+    cy.get('a[target="_blank"]').each(($link) => {
+      cy.wrap($link)
+        .should("have.attr", "href")
+        .and("not.be.empty");
     });
   });
-
-  // TEST: İletişim Linklerinin Doğruluğu
-  it('İletişim linkleri doğru sosyal medya adreslerine yönlendirmeli', () => {
-    cy.get('a[href*="x.com/Busecllskn"]').should('exist');
-    cy.get('a[href*="instagram.com/busecllskn"]').should('exist');
-    cy.get('a[href^="mailto:"]').should('be.visible');
-  });
-
-  // TEST: Sayfa İçi Linklerin ve Butonların Tıklanabilirliği
-  it('Sayfadaki tüm ana butonlar ve linkler tıklanabilir (aktif) olmalı', () => {
-    // Sitedeki dış bağlantıların tıklanmaya hazır olduğunu doğrular
-    cy.get('a[target="_blank"]').should('not.be.disabled');
-    cy.get('button').should('not.be.disabled');
-  });
-
 });
