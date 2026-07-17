@@ -27,7 +27,7 @@ function Projects() {
           </h2>
         </div>
 
-        {/*Yatay Kaydırma Alanı */}
+        {/* Yatay Kaydırma Alanı */}
         <div className="w-full flex justify-center overflow-x-auto pb-10 scrollbar-none">
           <div className="grid grid-rows-2 grid-flow-col gap-8 px-6 sm:px-12 lg:px-20 snap-x snap-mandatory justify-center justify-items-center">
             {data.projects?.items.map((project) => (
@@ -47,15 +47,12 @@ function Projects() {
                   />
                 </div>
 
-                {/*Proje Detayları */}
+                {/* Proje Detayları */}
                 <div className="w-full sm:w-1/2 p-6 sm:p-8 flex flex-col justify-between space-y-4">
                   <div className="space-y-3">
-                    {/* Başlık */}
                     <h3 className="text-2xl font-extrabold text-[#4731D3] tracking-tight">
                       {project.title}
                     </h3>
-
-                    {/* Açıklama */}
                     <p className="text-[#333333] leading-relaxed font-normal text-sm line-clamp-3">
                       {project.description}
                     </p>
@@ -74,16 +71,8 @@ function Projects() {
                       ))}
                     </div>
 
-                    {/* Linkler */}
-                    <div className="flex items-center gap-8 pt-2 border-t border-gray-100">
-                      <a 
-                        href={project.demo} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-sm sm:text-base font-bold text-[#4731D3] hover:text-[#3724a6] underline decoration-2 underline-offset-4 transition-colors"
-                      >
-                        {data.projects?.demoButton || "View Site"}
-                      </a>
+                    {/* Sadece Github Linki */}
+                    <div className="pt-2 border-t border-gray-100">
                       <a 
                         href={project.github} 
                         target="_blank" 
