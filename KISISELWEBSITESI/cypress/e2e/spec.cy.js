@@ -1,6 +1,6 @@
 describe("Kişisel Web Sitesi E2E Test", () => {
   beforeEach(() => {
-    cy.visit("/");
+    cy.visit("http://localhost:5173");
   });
 
   // Tema Değiştirme
