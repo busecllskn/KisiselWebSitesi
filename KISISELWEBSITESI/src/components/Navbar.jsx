@@ -3,6 +3,7 @@ import { ThemeContext } from "../context/ThemeContext";
 import { LanguageContext } from "../context/LanguageContext";
 import portfolio from "../data/data.json";
 import { toast } from "react-toastify";
+import { FaSun, FaMoon } from "react-icons/fa"; 
 
 function Navbar() {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
@@ -42,7 +43,6 @@ function Navbar() {
         </h1>
 
         <div className="flex items-center gap-6 sm:gap-8">
-          {/* Gece / Gündüz Butonu */}
           <div className="flex items-center gap-3">
             <button
               onClick={handleThemeChange}
@@ -52,21 +52,19 @@ function Navbar() {
                   : "bg-[#705ee4] border-white/20"
               }`}
             >
-              {/* Kayan Daire*/}
               <span
                 className={`absolute top-0.5 w-5 h-5 rounded-full shadow-md flex items-center justify-center transition-all duration-300 ${
                   darkMode ? "left-8 bg-[#FFE600]" : "left-1 bg-white"
                 }`}
               >
                 {darkMode ? (
-                  <i className="fa-solid fa-moon text-xs text-[#252128]" />
+                  <FaMoon className="text-xs text-[#252128]" />
                 ) : (
-                  <i className="fa-solid fa-sun text-xs text-[#FFE600]" />
+                  <FaSun className="text-xs text-[#FFE600]" />
                 )}
               </span>
             </button>
 
-            {/* Tema Metni*/}
             <span className="text-sm font-medium text-white hidden sm:block min-w-22.5">
               {darkMode
                 ? data.navbar.themeTextDark
@@ -74,7 +72,6 @@ function Navbar() {
             </span>
           </div>
 
-          {/* Dil Seçimi */}
           <button
             onClick={toggleLanguage}
             className="text-white font-semibold hover:text-[#CBF281] transition-colors duration-200"

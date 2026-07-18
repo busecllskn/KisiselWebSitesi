@@ -11,6 +11,8 @@ function Footer() {
   const { darkMode } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(""); // Hata mesajı için state
+
   const data = portfolio[language];
 
   const { values, handleChange, resetForm } = useForm(
@@ -20,42 +22,28 @@ function Footer() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setErrorMsg("");
 
-    // 1. İsim Doğrulama (5-30 karakter)
+    // 1. İsim Doğrulama
     if (values.name.length < 5 || values.name.length > 30) {
-      toast.error("İsim 5 ile 30 karakter arasında olmalıdır.");
+      setErrorMsg("İsim 5 ile 30 karakter arasında olmalıdır.");
       return;
     }
 
-    // 2. Şifre Doğrulama (En az 6 karakter)
+    // 2. Şifre Doğrulama
     if (values.password.length < 6) {
-      toast.error("Şifre en az 6 karakter olmalıdır.");
+      setErrorMsg("Şifre en az 6 karakter olmalıdır.");
       return;
     }
 
-    // 3. E-posta boşluk kontrolü
-    if (values.email.trim() === "") {
-      toast.error("E-posta alanı boş bırakılamaz.");
+    // 3. E-posta kontrolü
+    if (values.email.trim() === "" || !values.email.includes("@")) {
+      setErrorMsg("Geçerli bir e-posta adresi giriniz.");
       return;
     }
 
-    // LocalStorage Kaydı
-    const existingUsers = JSON.parse(
-      localStorage.getItem("registeredUsers") || "[]",
-    );
-    const newUser = {
-      name: values.name,
-      email: values.email,
-      password: values.password,
-    };
-    existingUsers.push(newUser);
-    localStorage.setItem("registeredUsers", JSON.stringify(existingUsers));
-
-    // Başarı Bildirimi
-    toast.success(
-      "Kayıt işleminiz başarıyla halloldu, artık iletişime geçebiliriz!",
-    );
-
+    // Başarı Durumu
+    toast.success("Kayıt işleminiz başarıyla halloldu!");
     resetForm();
     setIsFormOpen(false);
   };
@@ -73,11 +61,13 @@ function Footer() {
           Bir Sonraki Projenizde Birlikte Çalışalım.
         </h2>
 
-        {/* Tıklanabilir Metin */}
         <span
-          onClick={() => setIsFormOpen(!isFormOpen)}
+          onClick={() => {
+            setIsFormOpen(!isFormOpen);
+            setErrorMsg(""); 
+          }}
           className={`text-lg cursor-pointer transition-all duration-300 hover:underline ${
-            isFormOpen ? "opacity-70 italic" : "font-bold"
+            isFormOpen ? "opacity-70" : "font-bold"
           } ${darkMode ? "text-gray-300" : "text-[#120B3F]"}`}
         >
           {isFormOpen ? "İptal Et" : "Benimle iletişime geçebilirsiniz."}
@@ -93,7 +83,7 @@ function Footer() {
               name="name"
               value={values.name}
               onChange={handleChange}
-              placeholder="İsim (5-30 karakter)"
+              placeholder="İsim"
               className="p-3 rounded-lg border w-full text-black"
               required
             />
@@ -111,10 +101,17 @@ function Footer() {
               type="password"
               value={values.password}
               onChange={handleChange}
-              placeholder="Şifre (en az 6 karakter)"
+              placeholder="Şifre"
               className="p-3 rounded-lg border w-full text-black"
               required
             />
+
+            {/* Hata Mesajı */}
+            {errorMsg && (
+              <p className="text-red-500 font-bold text-sm text-left">
+                {errorMsg}
+              </p>
+            )}
 
             <button
               type="submit"
@@ -127,14 +124,14 @@ function Footer() {
 
         {/* İletişim Bilgileri */}
         {!isFormOpen && (
-          <>
+          <div className="flex flex-col items-center gap-4">
             <a
               href="mailto:buseclskn738@gmail.com"
               className={`text-xl font-medium underline underline-offset-4 ${darkMode ? "text-[#CBF281]" : "text-[#4731D3]"}`}
             >
               buseclskn738@gmail.com
             </a>
-            <div className="flex items-center gap-6 pt-4">
+            <div className="flex items-center gap-6 pt-2">
               <a
                 href="https://x.com/Busecllskn"
                 target="_blank"
@@ -166,7 +163,7 @@ function Footer() {
                 <FaInstagram className="text-3xl" />
               </a>
             </div>
-          </>
+          </div>
         )}
       </div>
     </footer>
