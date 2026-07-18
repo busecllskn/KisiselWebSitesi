@@ -1,176 +1,258 @@
 {
-      "tr": {
-      "navbar": {
-        "logo": "Buse",
-        "themeTextDark": "GECE MODU",
-        "themeTextLight": "GÜNDÜZ MODU",
-        "languageText": "ENGLISH'E GEÇ"
-      },
-      "hero": {
-        "greeting": "Merhaba, ben",
-        "name": "Buse Çalışkan",
-        "title": "Frontend Developer",
-        "description": "Modern, erişilebilir ve kullanıcı odaklı web uygulamaları geliştiriyorum. React, JavaScript ve Tailwind CSS ile projeler üretiyorum.",
-        "github": "Github",
-        "linkedin": "LinkedIn",
-        "image": "/images/profile.png"
-      },
-      "skills": {
-        "title": "Yetenekler",
-        "items": [
-          "JavaScript",
-          "React",
-          "Redux",
-          "Node.js",
-          "Tailwind CSS",
-          "Figma"
-        ]
-      },
-      "profile": {
-        "title": "Profil",
-        "basicInfoTitle": "Temel Bilgiler",
-        "aboutTitle": "Hakkımda",
-        "basicInfo": {
-          "birthDate": "01.02.1999",
-          "city": "Ankara",
-          "education": "Beslenme ve Diyetetik - Atılım Üniversitesi",
-          "role": "Frontend Developer",
-          "email": "buseclskn738@example.com"
-        },
-        "about": "Kullanıcı deneyimi odaklı, temiz kod standartlarına bağlı ve responsive tasarım prensiplerini benimseyen bir Frontend Geliştiriciyim. Teknolojik gelişmeleri takip ederek projelerime modern ve sürdürülebilir çözümler katıyorum."
-      },
-      "projects": {
-        "title": "Projeler",
-        "items": [
-          {
-            "id": 1,
-            "title": "Pizza Sipariş Uygulaması",
-            "description": "React kullanılarak geliştirilen pizza sipariş uygulaması.",
-            "technologies": ["React", "Axios", "React Router", "Tailwind CSS"],
-            "github": "https://github.com/busecllskn/Pizza-Project",
-            "image": "/images/pizza.png"
-          },
-          {
-            "id": 2,
-            "title": "Film Uygulaması",
-            "description": "Film ekleme, düzenleme ve silme işlemlerini gerçekleştiren CRUD uygulaması.",
-            "technologies": ["React", "Redux", "Axios"],
-            "image": "/images/movie.png"
-          },
-          {
-            "id": 3,
-            "title": "Başarılı Giriş Toastify Uygulaması",
-            "description": "Kullanıcı giriş işlemi başarılı olduğunda toastify ile bildirim gösteren uygulama.",
-            "technologies": ["React", "Toastify"],
-            "image": "/images/movie.png"
-          },
-          {
-            "id": 4,
-            "title": "Task Yönetim Uygulaması",
-            "description": "Görevleri yönetmek için kullanılan uygulama.",
-            "technologies": ["React", "Redux", "Axios"],
-            "image": "/images/movie.png"
-          }
-        ],
-        "githubButton": "Github"
-      },
-      "contact": {
-        "title": "Bir Sonraki Projenizde Birlikte Çalışalım.",
-        "description": "Benimle iletişime geçebilirsiniz.",
-        "email": "buseclskn738@gmail.com",
-        "github": "https://github.com/busecllskn",
-        "linkedin": "https://linkedin.com/in/busecllskn"
-      },
-      "footer": {
-        "copyright": "© 2026 Buse Çalışkan. Tüm hakları saklıdır."
-      }
+  "tr": {
+    "navbar": {
+      "logo": "Buse",
+      "themeTextDark": "GECE MODU",
+      "themeTextLight": "GÜNDÜZ MODU",
+      "languageText": "ENGLISH'E GEÇ"
     },
-  
-    "en": {
-      "navbar": {
-        "logo": "Buse",
-        "themeTextDark": "DARK MODE",
-        "themeTextLight": "LIGHT MODE",
-        "languageText": "SWITCH TO TURKISH"
+    "hero": {
+      "greeting": "Merhaba, ben",
+      "name": "Buse Çalışkan",
+      "title": "Frontend Developer",
+      "description": "Modern, erişilebilir ve kullanıcı odaklı web uygulamaları geliştiriyorum. React, JavaScript ve Tailwind CSS ile projeler üretiyorum.",
+      "github": "Github",
+      "linkedin": "LinkedIn",
+      "image": "/images/profile.png"
+    },
+    "skills": {
+      "title": "Yetenekler",
+      "items": [
+        "JavaScript",
+        "React",
+        "Redux",
+        "Node.js",
+        "Tailwind CSS",
+        "Figma"
+      ]
+    },
+    "profile": {
+      "title": "Profil",
+      "basicInfoTitle": "Temel Bilgiler",
+      "aboutTitle": "Hakkımda",
+      "basicInfo": {
+        "birthDate": "01.02.1999",
+        "city": "Ankara",
+        "education": "Beslenme ve Diyetetik - Atılım Üniversitesi",
+        "role": "Frontend Developer",
+        "email": "buseclskn738@example.com"
       },
-      "hero": {
-        "greeting": "Hi, I'm",
-        "name": "Buse Çalışkan",
-        "title": "Frontend Developer",
-        "description": "I build modern, accessible and user-friendly web applications using React, JavaScript and Tailwind CSS.",
-        "github": "Github",
-        "linkedin": "LinkedIn",
-        "image": "/images/profile.png"
-      },
-      "skills": {
-        "title": "Skills",
-        "items": [
-          "JavaScript",
-          "React",
-          "Redux",
-          "Node.js",
-          "Tailwind CSS",
-          "Figma"
-        ]
-      },
-      "profile": {
-        "title": "Profile",
-        "basicInfoTitle": "Basic Information",
-        "aboutTitle": "About Me",
-        "basicInfo": {
-          "birthDate": "01.02.1999",
-          "city": "Ankara",
-          "education": "Nutrition and Dietetics - Atılım University",
-          "role": "Frontend Developer",
-          "email": "buseclskn738@example.com"
+      "about": "Kullanıcı deneyimi odaklı, temiz kod standartlarına bağlı ve responsive tasarım prensiplerini benimseyen bir Frontend Geliştiriciyim. Teknolojik gelişmeleri takip ederek projelerime modern ve sürdürülebilir çözümler katıyorum."
+    },
+    "projects": {
+      "title": "Projeler",
+      "items": [
+        {
+          "id": 1,
+          "title": "Pizza Sipariş Uygulaması",
+          "description": "React kullanılarak geliştirilen pizza sipariş uygulaması.",
+          "technologies": ["React", "Axios", "React Router", "Tailwind CSS"],
+          "github": "https://github.com/busecllskn/Pizza-Project",
+          "image": "/images/pizza.png"
         },
-        "about": "I am a Frontend Developer focused on user experience, committed to clean code standards, and dedicated to responsive design principles. I stay up-to-date with technological advancements to incorporate modern and sustainable solutions into my projects."
+        {
+          "id": 2,
+          "title": "Film Uygulaması",
+          "description": "Film ekleme, düzenleme ve silme işlemlerini gerçekleştiren CRUD uygulaması.",
+          "technologies": ["React", "Redux", "Axios"],
+          "image": "/images/movie.png"
+        },
+        {
+          "id": 3,
+          "title": "Başarılı Giriş Toastify Uygulaması",
+          "description": "Kullanıcı giriş işlemi başarılı olduğunda toastify ile bildirim gösteren uygulama.",
+          "technologies": ["React", "Toastify"],
+          "image": "/images/movie.png"
+        },
+        {
+          "id": 4,
+          "title": "Task Yönetim Uygulaması",
+          "description": "Görevleri yönetmek için kullanılan uygulama.",
+          "technologies": ["React", "Redux", "Axios"],
+          "image": "/images/movie.png"
+        },
+        {
+          "id": 5,
+          "title": "Dark Mode Uygulaması",
+          "description": "Kullanıcıların karanlık mod ve aydınlık mod arasında geçiş yapabilmesini sağlayan uygulama.",
+          "technologies": ["React", "Tailwind CSS"],
+          "image": "/images/ecommerce.png"
+        },
+        {
+          "id": 6,
+          "title": "Basit Hesap Makinesi Uygulaması",
+          "description": "Kullanıcıların basit hesaplamalar yapabileceği bir uygulama.",
+          "technologies": ["React", "Tailwind CSS"],
+          "image": "/images/calculator.png"
+        },
+        {
+          "id": 7,
+          "title": "IMDB Film Veritabanı Uygulaması",
+          "description": "Kullanıcıların filmleri görüntüleyebileceği ve puanlayabileceği bir uygulama.",
+          "technologies": ["React", "Axios", "Tailwind CSS"],
+          "image": "/images/movie.png"
+        },
+        {
+          "id": 8,
+          "title": "Favori Filmler Uygulaması",
+          "description": "Kullanıcıların favori filmlerini kaydedebileceği ve görüntüleyebileceği bir uygulama.",
+          "technologies": ["React", "Redux", "Axios", "Tailwind CSS"],
+          "image": "/images/movie.png"
+        },
+        {
+          "id": 9,
+          "title": "Book Store Uygulaması",
+          "description": "Kullanıcıların kitapları görüntüleyebileceği ve satın alabileceği bir uygulama.",
+          "technologies": ["React", "Redux", "Axios", "Tailwind CSS"],
+          "image": "/images/bookstore.png"
+        },
+        {
+          "id": 10,
+          "title": "Filmler Sayfası Uygulaması",
+          "description": "Kullanıcıların filmleri görüntüleyebileceği ve satın alabileceği bir uygulama.",
+          "technologies": ["React", "Redux", "Axios", "Tailwind CSS"],
+          "image": "/images/movie.png"
+        }
+      ],
+      "githubButton": "Github"
+    },
+    "contact": {
+      "title": "Bir Sonraki Projenizde Birlikte Çalışalım.",
+      "description": "Benimle iletişime geçebilirsiniz.",
+      "email": "buseclskn738@gmail.com",
+      "github": "https://github.com/busecllskn",
+      "linkedin": "https://linkedin.com/in/busecllskn"
+    },
+    "footer": {
+      "copyright": "© 2026 Buse Çalışkan. Tüm hakları saklıdır."
+    }
+  },
+  "en": {
+    "navbar": {
+      "logo": "Buse",
+      "themeTextDark": "DARK MODE",
+      "themeTextLight": "LIGHT MODE",
+      "languageText": "SWITCH TO TURKISH"
+    },
+    "hero": {
+      "greeting": "Hi, I'm",
+      "name": "Buse Çalışkan",
+      "title": "Frontend Developer",
+      "description": "I build modern, accessible, and user-friendly web applications using React, JavaScript, and Tailwind CSS.",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "image": "/images/profile.png"
+    },
+    "skills": {
+      "title": "Skills",
+      "items": [
+        "JavaScript",
+        "React",
+        "Redux",
+        "Node.js",
+        "Tailwind CSS",
+        "Figma"
+      ]
+    },
+    "profile": {
+      "title": "Profile",
+      "basicInfoTitle": "Basic Information",
+      "aboutTitle": "About Me",
+      "basicInfo": {
+        "birthDate": "01.02.1999",
+        "city": "Ankara",
+        "education": "Nutrition and Dietetics - Atılım University",
+        "role": "Frontend Developer",
+        "email": "buseclskn738@example.com"
       },
-      "projects": {
-        "title": "Projects",
-        "items": [
-          {
-            "id": 1,
-            "title": "Pizza Ordering App",
-            "description": "A pizza ordering application built with React.",
-            "technologies": ["React", "Axios", "React Router", "Tailwind CSS"],
-            "github": "https://github.com/busecllskn/Pizza-Project",
-            "image": "/images/pizza.png"
-          },
-          {
-            "id": 2,
-            "title": "Movie App",
-            "description": "CRUD application for adding, editing and deleting movies.",
-            "technologies": ["React", "Redux", "Axios"],
-            "github": "https://github.com/username/movie-app",
-            "image": "/images/movie.png"
-          },
-          {
-            "id": 3,
-            "title": "Successful Login Toastify App",
-            "description": "Application that shows a notification with Toastify when the login process is successful.",
-            "technologies": ["React", "Toastify"],
-            "image": "/images/movie.png"
-          },
-          {
-            "id": 4,
-            "title": "Task Management App",
-            "description": "Application used to manage tasks.",
-            "technologies": ["React", "Redux", "Axios"],
-            "image": "/images/movie.png"
-          }
-        ],
-        "githubButton": "Github"
-      },
-      "contact": {
-        "title": "Let's Work Together on Your Next Project.",
-        "description": "Feel free to contact me.",
-        "email": "buseclskn738@gmail.com",
-        "github": "https://github.com/busecllskn",
-        "linkedin": "https://linkedin.com/in/busecllskn"
-      },
-      "footer": {
-        "copyright": "© 2026 Buse Çalışkan. All rights reserved."
-      }
+      "about": "I am a Frontend Developer focused on user experience, clean code principles, and responsive design. I keep up with the latest technologies and build modern, maintainable web applications."
+    },
+    "projects": {
+      "title": "Projects",
+      "items": [
+        {
+          "id": 1,
+          "title": "Pizza Ordering App",
+          "description": "A pizza ordering application developed using React.",
+          "technologies": ["React", "Axios", "React Router", "Tailwind CSS"],
+          "github": "https://github.com/busecllskn/Pizza-Project",
+          "image": "/images/pizza.png"
+        },
+        {
+          "id": 2,
+          "title": "Movie App",
+          "description": "A CRUD application for adding, editing, and deleting movies.",
+          "technologies": ["React", "Redux", "Axios"],
+          "image": "/images/movie.png"
+        },
+        {
+          "id": 3,
+          "title": "Toastify Login Success App",
+          "description": "An application that displays a Toastify notification after a successful user login.",
+          "technologies": ["React", "Toastify"],
+          "image": "/images/movie.png"
+        },
+        {
+          "id": 4,
+          "title": "Task Management App",
+          "description": "An application for managing tasks.",
+          "technologies": ["React", "Redux", "Axios"],
+          "image": "/images/movie.png"
+        },
+        {
+          "id": 5,
+          "title": "Dark Mode App",
+          "description": "An application that allows users to switch between light and dark modes.",
+          "technologies": ["React", "Tailwind CSS"],
+          "image": "/images/ecommerce.png"
+        },
+        {
+          "id": 6,
+          "title": "Simple Calculator App",
+          "description": "A calculator application for performing basic calculations.",
+          "technologies": ["React", "Tailwind CSS"],
+          "image": "/images/calculator.png"
+        },
+        {
+          "id": 7,
+          "title": "IMDb Movie Database App",
+          "description": "An application where users can browse and rate movies.",
+          "technologies": ["React", "Axios", "Tailwind CSS"],
+          "image": "/images/movie.png"
+        },
+        {
+          "id": 8,
+          "title": "Favorite Movies App",
+          "description": "An application that allows users to save and view their favorite movies.",
+          "technologies": ["React", "Redux", "Axios", "Tailwind CSS"],
+          "image": "/images/movie.png"
+        },
+        {
+          "id": 9,
+          "title": "Book Store App",
+          "description": "An application where users can browse and purchase books.",
+          "technologies": ["React", "Redux", "Axios", "Tailwind CSS"],
+          "image": "/images/bookstore.png"
+        },
+        {
+          "id": 10,
+          "title": "Movies Page App",
+          "description": "An application where users can browse and explore movies.",
+          "technologies": ["React", "Redux", "Axios", "Tailwind CSS"],
+          "image": "/images/movie.png"
+        }
+      ],
+      "githubButton": "GitHub"
+    },
+    "contact": {
+      "title": "Let's Work Together on Your Next Project.",
+      "description": "Feel free to contact me.",
+      "email": "buseclskn738@gmail.com",
+      "github": "https://github.com/busecllskn",
+      "linkedin": "https://linkedin.com/in/busecllskn"
+    },
+    "footer": {
+      "copyright": "© 2026 Buse Çalışkan. All rights reserved."
     }
   }
+}
