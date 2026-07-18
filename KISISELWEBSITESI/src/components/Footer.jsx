@@ -39,9 +39,23 @@ function Footer() {
       return;
     }
 
+    // LocalStorage Kaydı
+    const existingUsers = JSON.parse(
+      localStorage.getItem("registeredUsers") || "[]",
+    );
+    const newUser = {
+      name: values.name,
+      email: values.email,
+      password: values.password,
+    };
+    existingUsers.push(newUser);
+    localStorage.setItem("registeredUsers", JSON.stringify(existingUsers));
+
+    // Başarı Bildirimi
     toast.success(
       "Kayıt işleminiz başarıyla halloldu, artık iletişime geçebiliriz!",
     );
+
     resetForm();
     setIsFormOpen(false);
   };
@@ -111,6 +125,7 @@ function Footer() {
           </form>
         )}
 
+        {/* İletişim Bilgileri */}
         {!isFormOpen && (
           <>
             <a
