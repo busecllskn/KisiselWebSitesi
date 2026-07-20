@@ -1,24 +1,25 @@
-describe("Kişisel Web Sitesi E2E Test", () => {
+describe("Kişisel Web Sitesi Testleri", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:5173");
+    cy.visit("http://127.0.0.1:5173");
   });
 
-  it("Ana sayfa ve ana başlık yükleniyor", () => {
+  it("Ana sayfa ve başlıklar yükleniyor", () => {
     cy.contains("Buse Çalışkan").should("be.visible");
+    cy.contains("Frontend").should("be.visible");
   });
 
   it("Tema değiştirme butonu çalışmalı", () => {
-    cy.get("button").contains(/🌙|☀️|dark|light|tema/i).click();
+    cy.get("button").contains(/theme|dark|light|tema|🌙|☀️/i).click();
   });
 
-  it("Dil seçeneği çalışmalı", () => {
-    cy.get("button, select").contains(/EN|TR|Dil|Language/i).click();
+  it("Dil değiştirme seçeneği çalışmalı", () => {
+    cy.get("button, select, a").contains(/EN|TR|Lang|Language|Türkçe|English|Dil/i).click();
   });
 
-  it("İletişim formu ve mesaj alanı doldurulabilmeli ve gönderilebilmeli", () => {
-    cy.get('input[name="name"]').type("Test Kullanıcı");
-    cy.get('input[name="email"]').type("test@test.com");
-    cy.get('textarea[name="message"]').type("Bu bir test mesajıdır.");
+  it("İletişim formu ve metin alanı", () => {
+    cy.get('input[name="name"]').type("Buse");
+    cy.get('input[name="email"]').type("buse@example.com");
+    cy.get('textarea[name="message"]').type("Merhaba, portfolyonuz harika görünüyor!");
     cy.get('form').submit();
   });
 });
