@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { LanguageContext } from "../context/LanguageContext";
 import { useForm } from "../hooks/useForm";
+import { useLocalStorage } from "../hooks/useLocalStorage.jsx"; 
 import { FaTwitter, FaGithub, FaAt, FaInstagram } from "react-icons/fa";
 import portfolio from "../data/data.json";
 import { ToastContainer, toast } from "react-toastify";
@@ -10,7 +11,8 @@ import "react-toastify/dist/ReactToastify.css";
 function Footer() {
   const { darkMode } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
-  const [isFormOpen, setIsFormOpen] = useState(false);
+  
+  const [isFormOpen, setIsFormOpen] = useLocalStorage("isFormOpen", false);
   const [errors, setErrors] = useState({ name: "", email: "", password: "" });
 
   const data = portfolio[language];
@@ -56,7 +58,6 @@ function Footer() {
   };
 
   return (
-    // w-full: yatayda tam ekran, h-[75vh]: dikeyde ekranın 3/4'ü
     <footer
       className={`w-full h-[75vh] flex flex-col justify-center items-center transition-colors duration-300 ${
         darkMode ? "bg-[#252128]" : "bg-[#F9F9F9]"
