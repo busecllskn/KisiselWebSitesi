@@ -2,52 +2,49 @@ import { useState, useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { LanguageContext } from "../context/LanguageContext";
 import { useForm } from "../hooks/useForm";
-import { useLocalStorage } from "../hooks/useLocalStorage.jsx"; 
+import { useLocalStorage } from "../hooks/useLocalStorage.jsx";
 import { FaTwitter, FaGithub, FaAt, FaInstagram } from "react-icons/fa";
 import portfolio from "../data/data.json";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Footer() {
   const { darkMode } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
-  
+
   const [isFormOpen, setIsFormOpen] = useLocalStorage("isFormOpen", false);
   const [errors, setErrors] = useState({ name: "", email: "", password: "" });
 
   const data = portfolio[language];
 
-  const { values, handleChange, resetForm } = useForm({ 
-    name: "", 
-    email: "", 
-    password: "" 
-  },
+  const { values, handleChange, resetForm } = useForm(
+    {
+      name: "",
+      email: "",
+      password: "",
+    },
     "register_form_data",
   );
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let newErrors = { 
-      name: "", 
-      email: "", 
-      password: "" 
-    };
-    let isValid = true;
 
-    if (values.name.trim().length < 4) {
-      newErrors.name = "İsim ve soyisim en az 4 karakter olmalıdır.";
-      isValid = false;
-    }
-    if (values.email.trim() === "" || !values.email.includes("@")) {
-      newErrors.email = "Lütfen geçerli bir e-posta adresi giriniz.";
-      isValid = false;
-    }
-    if (values.password.length < 6) {
-      newErrors.password = "Şifre en az 6 karakter olmalıdır.";
-      isValid = false;
-    }
+    const newErrors = {
+      name:
+        values.name.trim().length < 4
+          ? "İsim ve soyisim en az 4 karakter olmalıdır."
+          : "",
+      email:
+        values.email.trim() === "" || !values.email.includes("@")
+          ? "Lütfen geçerli bir e-posta adresi giriniz."
+          : "",
+      password:
+        values.password.length < 6 ? "Şifre en az 6 karakter olmalıdır." : "",
+    };
 
     setErrors(newErrors);
+
+    const isValid = Object.values(newErrors).every((error) => error === "");
 
     if (isValid) {
       toast.success("Kayıt işleminiz başarıyla halloldu!");
@@ -63,8 +60,6 @@ function Footer() {
         darkMode ? "bg-[#252128]" : "bg-[#F9F9F9]"
       }`}
     >
-      <ToastContainer position="bottom-right" autoClose={3000} />
-
       <div className="max-w-4xl w-full px-6 flex flex-col items-center text-center space-y-6">
         <h2
           className={`text-4xl md:text-5xl font-bold tracking-tight ${
@@ -97,7 +92,9 @@ function Footer() {
                 value={values.name}
                 onChange={handleChange}
                 placeholder="İsim ve Soyisim"
-                className={`p-3 rounded-lg border w-full text-black ${errors.name ? "border-red-500" : "border-gray-300"}`}
+                className={`p-3 rounded-lg border w-full text-black ${
+                  errors.name ? "border-red-500" : "border-gray-300"
+                }`}
               />
               {errors.name && (
                 <p className="text-red-500 text-xs font-bold text-left mt-1">
@@ -113,7 +110,9 @@ function Footer() {
                 value={values.email}
                 onChange={handleChange}
                 placeholder="E-posta"
-                className={`p-3 rounded-lg border w-full text-black ${errors.email ? "border-red-500" : "border-gray-300"}`}
+                className={`p-3 rounded-lg border w-full text-black ${
+                  errors.email ? "border-red-500" : "border-gray-300"
+                }`}
               />
               {errors.email && (
                 <p className="text-red-500 text-xs font-bold text-left mt-1">
@@ -129,7 +128,9 @@ function Footer() {
                 value={values.password}
                 onChange={handleChange}
                 placeholder="Şifre"
-                className={`p-3 rounded-lg border w-full text-black ${errors.password ? "border-red-500" : "border-gray-300"}`}
+                className={`p-3 rounded-lg border w-full text-black ${
+                  errors.password ? "border-red-500" : "border-gray-300"
+                }`}
               />
               {errors.password && (
                 <p className="text-red-500 text-xs font-bold text-left mt-1">

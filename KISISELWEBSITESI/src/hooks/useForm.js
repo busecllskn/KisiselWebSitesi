@@ -7,7 +7,9 @@ export const useForm = (initialValues, storageKey) => {
   });
 
   useEffect(() => {
-    localStorage.setItem(storageKey, JSON.stringify(values));
+    if (values) {
+      localStorage.setItem(storageKey, JSON.stringify(values));
+    }
   }, [values, storageKey]);
 
   const handleChange = (e) => {
@@ -17,7 +19,7 @@ export const useForm = (initialValues, storageKey) => {
 
   const resetForm = () => {
     setValues(initialValues);
-    localStorage.removeItem(storageKey);
+    localStorage.removeItem(storageKey); 
   };
 
   return { values, handleChange, resetForm };
