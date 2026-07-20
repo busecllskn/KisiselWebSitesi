@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { LanguageContext } from "../context/LanguageContext";
 import portfolio from "../data/data.json";
-import pictureOfCoding from "../assets/pictureofcoding.jpg"; // Görseli en üstte import ettik
+import pictureOfCoding from "../assets/pictureofcoding.jpg";
 
 function Profile() {
   const { darkMode } = useContext(ThemeContext);

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-// 'export const' şeklinde başladığına emin ol
 export const useForm = (initialValues, storageKey) => {
   const [values, setValues] = useState(() => {
     const saved = localStorage.getItem(storageKey);
