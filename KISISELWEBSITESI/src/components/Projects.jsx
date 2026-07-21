@@ -61,7 +61,6 @@ function Projects() {
               {/* Resim Alanı */}
               <div className="w-full h-60 bg-gray-200 overflow-hidden">
                 <img
-                  // Resim yolu public klasöründen başlar
                   src={
                     project.image.startsWith("/")
                       ? project.image
@@ -70,7 +69,6 @@ function Projects() {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   onError={(e) => {
-                    // Resim bulunamazsa yedek görsel
                     e.target.src =
                       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800";
                   }}
@@ -78,7 +76,7 @@ function Projects() {
               </div>
 
               {/* İçerik Alanı */}
-              <div className="p-8 flex flex-col flex-grow">
+              <div className="p-8 flex flex-col grow">
                 <h3 className="text-2xl font-extrabold text-[#4731D3] mb-3">
                   {project.title}
                 </h3>
