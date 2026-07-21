@@ -9,17 +9,21 @@ describe("Kişisel Web Sitesi Testleri", () => {
   });
 
   it("Tema değiştirme butonu çalışmalı", () => {
-    cy.get("button").contains(/theme|dark|light|tema|🌙|☀️/i).click();
+    cy.get('button.rounded-full').first().should('be.visible').click();
   });
 
   it("Dil değiştirme seçeneği çalışmalı", () => {
-    cy.get("button, select, a").contains(/EN|TR|Lang|Language|Türkçe|English|Dil/i).click();
+    cy.get("button, select, a").contains(/EN|TR|Lang|Language|Türkçe|English|Dil/i).first().click();
   });
 
   it("İletişim formu ve metin alanı", () => {
-    cy.get('input[name="name"]').type("Buse");
+    cy.url().should("include", "/home");
+    
+    cy.scrollTo('bottom');
+    cy.contains("Benimle iletişime geçebilirsiniz.").should('be.visible').click();
+    cy.get('input[name="name"]', { timeout: 10000 }).should('be.visible').type("Buse");
     cy.get('input[name="email"]').type("buse@example.com");
-    cy.get('textarea[name="message"]').type("Merhaba, portfolyonuz harika görünüyor!");
+    cy.get('input[name="password"]').type("Sifrem123*");
     cy.get('form').submit();
   });
 });
